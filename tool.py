@@ -16,12 +16,20 @@ def find_leaves(root):
 
 leaves = find_leaves(root)
 
-p.pprint(leaves)
-print()
-
-# Then iterate through all the leaves, make a list of their bound attributes
+# Parse the bounds attribute of each of the leaf elements into a list of tuples so Pillow can use the bounds
+bounds = []
 for leaf in leaves:
-    print(leaf.attrib["bounds"])
+    bound = leaf.attrib["bounds"].strip('[]').split('][')
+    bound_list = []
+    for coordinate in bound:
+        split = coordinate.split(",")
+        bound_list.append((int(split[0]), int(split[1])))
+        
+    bounds.append(bound_list)
+
+
+# TODO: need to iterate over those parsed bounds and create a yellow rectangle for each of them on the image
+# TODO: need to figure out taking the files in as pairs, and going through all those pairs and the output and shazz
 
             
 
