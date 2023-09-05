@@ -18,6 +18,6 @@ I then group the files into pairs.
 Then for each of those file pairs:
 1. I parse the xml file and identify the leaf elements using the xml.etree.ElementTree package.
 2. I identify the bound attributes of each of the leaf elements.
-3. I draw yellow rectangular outlines according to the bound values on a copy of the screenshot png image.
+3. I draw yellow rectangular outlines according to the bound values on a copy of the screenshot png image using the Pillow package.
 4. I save the modified screenshot copy to the output folder
 
