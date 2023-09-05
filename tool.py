@@ -24,7 +24,7 @@ for leaf in leaves:
     for coordinate in bound:
         split = coordinate.split(",")
         bound_list.append((int(split[0]), int(split[1])))
-        
+
     bounds.append(bound_list)
 
 
@@ -32,5 +32,26 @@ for leaf in leaves:
 # TODO: need to figure out taking the files in as pairs, and going through all those pairs and the output and shazz
 
             
+### applying yellow rectangles to the png
 
+from PIL import Image, ImageDraw
+
+# Load the PNG image
+input_image = Image.open('/Users/noah/Desktop/software-engineering/skills-test/Programming-Assignment-Data/com.apalon.ringtones.png')
+
+# Create a drawing object
+draw = ImageDraw.Draw(input_image)
+
+# Draw yellow rectangle outline for each leaf element
+for bound in bounds:
+    draw.rectangle(bound, outline='yellow', width=4)
+
+# # Define the bounding box coordinates
+# box_coordinates = [(0, 0), (1440, 984)]
+
+# # Draw a yellow rectangle outline
+# draw.rectangle(box_coordinates, outline='yellow', width=2)
+
+# Save or display the modified image
+input_image.save('output_image.png')
 
