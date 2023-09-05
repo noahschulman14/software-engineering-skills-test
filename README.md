@@ -5,7 +5,7 @@
 1. After cloning and opening this repo, run the following code:
 
     ``` pip install -r requirements.txt ```
-2. Run the program my entering ```tool.py``` into your command line
+2. Run the program by entering ```tool.py``` into your command line
 3. The program will prompt you to enter the path of the directory that has the input file pairs, paste this into your command line when prompted
 4. The output screenshot files will then be generated and placed into the "output" folder
 
